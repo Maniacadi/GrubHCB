@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wake Up Sid</title>
+    <link rel="icon" type="image/png" href="WUS.webp" sizes="32x32" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <style>
+      @keyframes pulse-glow {
+        0%, 100% { box-shadow: 0 0 15px #38bdf8; }
+        50% { box-shadow: 0 0 25px #38bdf8; }
+      }
+      body {
+        background: url('https://images.unsplash.com/photo-1583144568008-76743354fa5a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+        font-family: "Comic Sans MS", cursive, sans-serif;
+      }
+      h1, h2, h3, h4 {
+        font-family: "Impact", fantasy;
+      } q
+      .old-style-border {
+        border: 3px double #00ffff;
+        box-shadow: inset 0 0 10px #00ffff;
+        background: linear-gradient(to bottom, #111, #333);
+      }
+      .blink {
+        animation: blinker 1s linear infinite;
+      }
+      @keyframes blinker {
+        50% { opacity: 0; }
+      }
+    </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const cards = document.querySelectorAll('.product-card');
+        cards.forEach((card, index) => {
+          setTimeout(() => {
+            card.classList.remove('opacity-0', 'translate-y-10');
+            card.classList.add('opacity-100', 'translate-y-0');
+          }, index * 300);
+        });
+      });
+    </script>
+  </head>
+  <body class="bg-gray-900 text-blue-100 font-sans text-sm">
+    <nav class="bg-black text-lime-300 p-2 old-style-border">
+      <div class="container mx-auto flex justify-between items-center">
+        <h1 class="text-3xl font-bold blink">Wake Up Sid</h1>
+        <ul class="flex space-x-2">
+          <li><a href="#" class="hover:underline">Home</a></li>
+          <li><a href="#products" class="hover:underline">Cast</a></li>
+          <li><a href="#quotes" class="hover:underline">Reviews</a></li>
+          <li><a href="#about" class="hover:underline">About</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="container mx-auto px-4 py-12 text-center old-style-border mt-6 mb-10">
+      <h2 class="text-5xl font-bold text-green-200 mb-4">The Purest improv of a confused teenager</h2>
+      <p class="text-base italic mb-6">This was literally perfect, showing the life of a teenager confused in life ( I related very hard tbh )</p>
+      <img
+        src="https://imgs.search.brave.com/-ZDkIpMlGFdwtfPpUJIyGAWrQp_ipZ_I4nVopBwn_mA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL00v/TVY1Qk5XUmpaVFpp/TlRNdFpUa3dOaTAw/TURJeExUZ3lZakF0/T0RFNVkyWTJaR1Jp/WWpSbFhrRXlYa0Zx/Y0djQC5qcGc"
+        alt="Walter White"
+        class="mx-auto rounded shadow-lg w-60 h-80 object-cover border-4 border-cyan-300"
+      />
+    </section>
+
+    <section id="products" class="container mx-auto px-4 py-10 mb-12">
+      <h3 class="text-4xl text-center font-semibold text-yellow-300 mb-6">Our favourite characters ( Main as well !! )</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="product-card bg-gray-700 p-4 rounded shadow-md transform opacity-0 translate-y-10 transition duration-700 old-style-border">
+          <img src="https://imgs.search.brave.com/k6k3AKP2dOMor4RPXst4cckDZO8IzyzbJ8hPP90yEqQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbS5p/bmRpYXRpbWVzLmlu/L2NvbnRlbnQvMjAy/MC9PY3QvbjNfNWY3/ODI0M2E3OWQ2OS5q/cGc_dz0xMjAwJmg9/OTAwJmNjPTEmd2Vi/cD0xJnE9NzU" alt="Ranbir Kapoor" class="rounded mb-2 w-full h-60 object-cover" />
+          <h4 class="text-2xl font-bold text-cyan-400">Rabir aka SID</h4>
+          <p class="italic">"Yo! This man was the show stealer" - Average movie reviewers</p>
+        </div>
+        <div class="product-card bg-gray-700 p-4 rounded shadow-md transform opacity-0 translate-y-10 transition duration-700 old-style-border">
+          <img src="https://m.media-amazon.com/images/M/MV5BMmY1YzNlMGItODEyOS00NjY5LTg3ZGMtNjExZTMwMWZjYWRlXkEyXkFqcGc@._V1_QL75_UX604.5_.jpg" alt="Konkona Sen" class="rounded mb-2 w-full h-60 object-cover" />
+          <h4 class="text-2xl font-bold text-cyan-400">Konkona Sen</h4>
+          <p class="italic">"She Nailed it fr !! " – Me</p>
+        </div>
+        <div class="product-card bg-gray-700 p-4 rounded shadow-md transform opacity-0 translate-y-10 transition duration-700 old-style-border">
+          <img src="https://imgs.search.brave.com/TqDL_0_gXzMxiusFXkh3VD_9lhiHZrnPTGMl-U2V414/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTIz/MTM1MDQ5My9waG90/by9pbi10aGlzLXBp/Y3R1cmUtdGFrZW4t/b24tZmVicnVhcnkt/MjMtMjAyMS1ib2xs/eXdvb2QtYWN0b3It/YW51cGFtLWtoZXIt/cG9zZXMtZm9yLWEt/cGljdHVyZS5qcGc_/cz02MTJ4NjEyJnc9/MCZrPTIwJmM9SjFG/U1dXclRlUk91TmVH/bHRrYzBtOGxSQkhD/MWc1Z1A3VmE1TENl/Q3RGTT0" alt="Anupam Kher" class="rounded mb-2 w-full h-60 object-cover" />
+          <h4 class="text-2xl font-bold text-cyan-400">Total Dad Vibes</h4>
+          <p class="italic">"Shows the basic Indian dads !!"</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="quotes" class="bg-pink-500 text-black py-10 old-style-border mb-12">
+      <div class="container mx-auto px-4 text-center">
+        <h3 class="text-4xl text-green-400 font-semibold mb-8">Viewer Reactions</h3>
+        <div class="grid md:grid-cols-3 gap-4">
+          <blockquote class="bg-gray-800 text-blue-100 p-4 rounded shadow-md border border-blue-400">
+            "A pleasant and engaging film that relates with many viewers, offering a fresh perspective on the coming of age genre." – Viewers
+          </blockquote>
+          <blockquote class="bg-gray-800 text-pink-200 p-4 rounded shadow-md border border-pink-400">
+            "Literally PERFECT!" – Aditya ( Me )
+          </blockquote>
+          <blockquote class="bg-gray-800 text-green-200 p-4 rounded shadow-md border border-green-400">
+            "Refreshing and heart-warming, Wake Up Sid really puts you in the mood for love" – Times India
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="container mx-auto px-4 py-10 text-center old-style-border mb-12">
+      <h3 class="text-4xl font-semibold text-blue-300 mb-4">The Ranbir Kapoor Legacy</h3>
+      <div class="flex flex-col items-center gap-4">
+        <img
+          src="https://static.toiimg.com/thumb/imgsize-23456,msid-56441969,width-600,resizemode-4/56441969.jpg"
+          alt="Ranbir Ofcourse"
+          class="w-32 h-32 object-cover rounded-full border-4 border-blue-400"
+        />
+        <p class="max-w-2xl text-sm">
+          Made with pure love and hope to show people what a teenager who's just starting his life goes through while choosing between career and dreams, this movie is pure bliss !!
+        </p>
+      </div>
+    </section>
+
+    <footer class="bg-black p-4 text-center text-sm text-lime-300 old-style-border w-full">
+      <p>&copy; 2009 Wake Up Sid. All rights reserved. My name is Aditya kr, Signing off.</p>
+    </footer>
+  </body>
+</html>
